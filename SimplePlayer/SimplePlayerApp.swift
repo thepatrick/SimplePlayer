@@ -11,13 +11,8 @@ import SwiftUI
 struct SimplePlayerApp: App {
     var body: some Scene {
         
-        WindowGroup {
+        Window("SimplePlayer", id: "main") {
             ContentView()
-        }.commands {
-            
-//            CommandGroup(replacing: .newItem) {
-//                Button("meow") {}
-//            }
         }
     }
 }

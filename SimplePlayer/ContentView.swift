@@ -21,9 +21,8 @@ struct ContentView: View {
             if !model.booted || model.loading || model.bootError != nil {
                 VStack {
                     if !model.booted {
-                        Button("Boot") {
-                            showFileImporter = true
-                        }
+                        Text("No Folder Selected").font(.headline).padding()
+                        Text("Use the Open Folder button in the toolbar to begin")
                     } else if let error = model.bootError {
                         Text("Error: \(error)")
                     } else {
@@ -36,28 +35,37 @@ struct ContentView: View {
             }
         }
         .onAppear() {
-//            model.boot()
+            model.retrieveSelectedDirectoryOrClear()
         }.fileImporter(
             isPresented: $showFileImporter,
             allowedContentTypes: [.directory]
         ) { result in
              switch result {
              case .success(let directory):
-                 // gain access to the directory
-                 let gotAccess = directory.startAccessingSecurityScopedResource()
-                 if !gotAccess { return }
-                 // access the directory URL
-                 // (read templates in the directory, make a bookmark, etc.)
-                 model.boot(from: directory)
-//                 onTemplatesDirectoryPicked(directory)
-                 // release access
-//                 directory.stopAccessingSecurityScopedResource()
+                 model.selectNewFolder(directory)
              case .failure(let error):
                  // handle error
                  print(error)
              }
         }
-        
+        .toolbar {
+            if let directory = model.selectedDirectory {
+                Text(directory.lastPathComponent).fontWeight(.bold)
+            }
+            if model.booted {
+                Text("\(model.items.count) videos")
+            }
+            Button("Open Folder") {
+                showFileImporter = true
+            }
+            .disabled(model.loading)
+            Button("Clear") {
+                model.clear()
+            }
+            .disabled(model.loading || model.selectedDirectory == nil)
+        }
+        .frame(minWidth: 400, minHeight: 400)
+        .windowToolbarFullScreenVisibility(.onHover)
     }
 }
 
