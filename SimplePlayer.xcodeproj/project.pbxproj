@@ -11,13 +11,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CDC9F6D02D2A0891003B89C2 /* SimplePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDC9F6D02D2A0891003B89C2 /* LocalProjector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalProjector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC9F6E72D2A3796003B89C2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/AVKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		CDD3A11B2D2D21030020D0EA /* Exceptions for "SimplePlayer" folder in "LocalProjector" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = CDC9F6CF2D2A0891003B89C2 /* LocalProjector */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		CDC9F6D22D2A0891003B89C2 /* SimplePlayer */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				CDD3A11B2D2D21030020D0EA /* Exceptions for "SimplePlayer" folder in "LocalProjector" target */,
+			);
 			path = SimplePlayer;
 			sourceTree = "<group>";
 		};
@@ -47,7 +60,7 @@
 		CDC9F6D12D2A0891003B89C2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CDC9F6D02D2A0891003B89C2 /* SimplePlayer.app */,
+				CDC9F6D02D2A0891003B89C2 /* LocalProjector.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,9 +76,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CDC9F6CF2D2A0891003B89C2 /* SimplePlayer */ = {
+		CDC9F6CF2D2A0891003B89C2 /* LocalProjector */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CDC9F6DF2D2A0892003B89C2 /* Build configuration list for PBXNativeTarget "SimplePlayer" */;
+			buildConfigurationList = CDC9F6DF2D2A0892003B89C2 /* Build configuration list for PBXNativeTarget "LocalProjector" */;
 			buildPhases = (
 				CDC9F6CC2D2A0891003B89C2 /* Sources */,
 				CDC9F6CD2D2A0891003B89C2 /* Frameworks */,
@@ -78,11 +91,11 @@
 			fileSystemSynchronizedGroups = (
 				CDC9F6D22D2A0891003B89C2 /* SimplePlayer */,
 			);
-			name = SimplePlayer;
+			name = LocalProjector;
 			packageProductDependencies = (
 			);
 			productName = SimplePlayer;
-			productReference = CDC9F6D02D2A0891003B89C2 /* SimplePlayer.app */;
+			productReference = CDC9F6D02D2A0891003B89C2 /* LocalProjector.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -114,7 +127,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CDC9F6CF2D2A0891003B89C2 /* SimplePlayer */,
+				CDC9F6CF2D2A0891003B89C2 /* LocalProjector */,
 			);
 		};
 /* End PBXProject section */
@@ -267,6 +280,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimplePlayer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Local Projector";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -285,10 +300,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nz.patrick.SimplePlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
@@ -306,6 +321,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimplePlayer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Local Projector";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -324,10 +341,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nz.patrick.SimplePlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
@@ -344,7 +361,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CDC9F6DF2D2A0892003B89C2 /* Build configuration list for PBXNativeTarget "SimplePlayer" */ = {
+		CDC9F6DF2D2A0892003B89C2 /* Build configuration list for PBXNativeTarget "LocalProjector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CDC9F6E02D2A0892003B89C2 /* Debug */,

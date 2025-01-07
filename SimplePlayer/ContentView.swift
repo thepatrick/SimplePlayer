@@ -16,7 +16,6 @@ struct ContentView: View {
     
     var body: some View {
         
-
         Group {
             if !model.booted || model.loading || model.bootError != nil {
                 VStack {
@@ -63,6 +62,7 @@ struct ContentView: View {
                 model.clear()
             }
             .disabled(model.loading || model.selectedDirectory == nil)
+            
         }
         .frame(minWidth: 400, minHeight: 400)
         .windowToolbarFullScreenVisibility(.onHover)
