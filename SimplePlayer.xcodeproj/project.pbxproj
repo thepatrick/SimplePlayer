@@ -282,6 +282,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SimplePlayer/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Local Projector";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 Patrick Quinn-Graham";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -323,6 +324,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SimplePlayer/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Local Projector";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 Patrick Quinn-Graham";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

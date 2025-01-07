@@ -11,7 +11,7 @@ import SwiftUI
 struct SimplePlayerApp: App {
     var body: some Scene {
         
-        Window("SimplePlayer", id: "main") {
+        Window("Projector", id: "main") {
             ContentView()
         }
     }
